@@ -1,15 +1,20 @@
 
 .metadata
-bin/
-tmp/
+bin\
+tmp\
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
-.settings/
+.settings\
 .loadpath
 .recommenders
+target\
+log4j\
+*.jar
+.classpath
+.project
 
 # External tool builders
 .externalToolBuilders/
