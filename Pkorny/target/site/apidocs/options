@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/ckaroly/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar;C:/Users/ckaroly/javaforme/Java/jre1.8.0_171/lib/ext/jfxrt.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'c:/Users/ckaroly/git/repository/Pkorny/src'
+-author
+-bottom
+'Copyright &#169; 2019. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'c:/Users/ckaroly/git/repository/Pkorny/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'PGT_regi 0.0.1-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'c:/Users/ckaroly/git/repository/Pkorny/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'PGT_regi 0.0.1-SNAPSHOT API'
