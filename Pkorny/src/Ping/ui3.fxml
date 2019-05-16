@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+
+<VBox spacing="10"  prefWidth="1000" prefHeight="600" fx:controller="Ping.Controller" xmlns:fx="http://javafx.com/fxml">
+     <fx:define>
+        <Font fx:id="FONT" size="18" />
+    </fx:define>
+    <HBox spacing="1" alignment="CENTER">
+        <Button text="Pingelt cimek" prefWidth="200" font="$FONT" onAction="#information" />
+        <Button text="Valaszolt cimek" prefWidth="200" font="$FONT" onAction="#information" />
+        <Button text="Nem valaszolt" prefWidth="200" font="$FONT" onAction="#information" />
+        <Button text="TraceRoute cimek" prefWidth="200" font="$FONT" onAction="#information" />
+        <Button text="Utvonalak" prefWidth="200" font="$FONT" onAction="#information" />
+    </HBox>
+    <StackPane alignment="CENTER" prefWidth="600">
+        <Text fx:id="INFO" font="$FONT" />
+    </StackPane>
+</VBox>
