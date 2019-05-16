@@ -1,27 +1,35 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>PGT_regi</groupId>
-  <artifactId>PGT_regi</artifactId>
-  <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Pkorny</groupId>
+	<artifactId>Pkorny</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
-  
-  <build>
-  
-    <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
-    <plugins>
-    <plugin>
+	</properties>
+	<distributionManagement>
+		<site>
+			<id>Karcsi.progkorny.project</id>
+			<url>nothing</url>
+		</site>
+	</distributionManagement>
+
+	<build>
+
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.10</version>
@@ -30,140 +38,140 @@
 					<downloadJavadocs>false</downloadJavadocs>
 				</configuration>
 			</plugin>
-    <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.7.0</version>
-                <configuration>
-                    <mainClass>Ping.App</mainClass>
-                </configuration>
-            </plugin>
-            <plugin>
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>8.7.0</version>
+				<configuration>
+					<mainClass>Ping.App</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-				  <!-- DO NOT include log4j.properties file in your Jar -->
-				  <excludes>
-					<exclude>**/log4j.properties</exclude>
-				  </excludes>
-				  <archive>
-					<manifest>
-						<!-- Jar file entry point -->
-						<mainClass>Ping.App</mainClass>
-					</manifest>
-				  </archive>
+					<!-- DO NOT include log4j.properties file in your Jar -->
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+					<archive>
+						<manifest>
+							<!-- Jar file entry point -->
+							<mainClass>Ping.App</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
-    <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-site-plugin</artifactId>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
 				<version>3.6</version>
 				<configuration>
-				<message>Creating site for PGR_regi</message>
+					<message>Creating site for Progkorny</message>
 					<locales>en</locales>
 				</configuration>
-				
-       
-      
-      <executions>
-        <execution>
-          <goals>
-            <goal>site</goal>
-          </goals>
-          <phase>site</phase>
-        </execution>
-      </executions>
+
+
+
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
 			</plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>  
-        
-        <encoding>UTF-8</encoding>
-    
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      </plugins>
-      </build>
-      
-       <reporting>
-           <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.6</version>
-        <reportSets>
-          <reportSet>
-            <reports><!-- select reports -->
-              <report>index</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-       
-        <configuration>
-          
-          <encoding>UTF-8</encoding>
-          
-        </configuration>
-        
-      </plugin>
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-        <charset>UTF-8</charset>
-                    <docencoding>UTF-8</docencoding>
-         <source>8</source> 
-      <additionalparam>-Xdoclint:none</additionalparam>
-    </configuration>
-        <version>2.9</version>
-        <reportSets>
-          <reportSet><!-- by default, id = "default" -->
-            <reports><!-- select non-aggregate reports -->
-              <report>javadoc</report>
-              <report>test-javadoc</report>
-            </reports>
-          </reportSet>
-          <reportSet><!-- aggregate reportSet, to define in poms having modules -->
-            <id>aggregate</id>
-            <inherited>false</inherited><!-- don't run aggregate in child modules -->
-            <reports>
-              <report>aggregate</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-    </plugins>
-  </reporting>
-   
-    
-  
-       <dependencies>
-       
-   		<dependency>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+
+					<encoding>UTF-8</encoding>
+
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.6</version>
+				<reportSets>
+					<reportSet>
+						<reports><!-- select reports -->
+							<report>index</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+
+				<configuration>
+
+					<encoding>UTF-8</encoding>
+
+				</configuration>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<charset>UTF-8</charset>
+					<docencoding>UTF-8</docencoding>
+					<source>8</source>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+				<version>2.9</version>
+				<reportSets>
+					<reportSet><!-- by default, id = "default" -->
+						<reports><!-- select non-aggregate reports -->
+							<report>javadoc</report>
+							<report>test-javadoc</report>
+						</reports>
+					</reportSet>
+					<reportSet><!-- aggregate reportSet, to define in poms having modules -->
+						<id>aggregate</id>
+						<inherited>false</inherited><!-- don't run aggregate in child modules -->
+						<reports>
+							<report>aggregate</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+
+
+	<dependencies>
+
+		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
 
-       	<dependency>
-       		<groupId>com.oracle</groupId>
-       		<artifactId>javaFX</artifactId>
-       		<version>2.2</version>
-       		<scope>system</scope>
-       		<systemPath>C:\Users\ckaroly\javaforme\Java\jre1.8.0_171\lib\ext\jfxrt.jar</systemPath>
-       	</dependency>
-       </dependencies>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>javaFX</artifactId>
+			<version>2.2</version>
+			<scope>system</scope>
+			<systemPath>C:\Users\ckaroly\javaforme\Java\jre1.8.0_171\lib\ext\jfxrt.jar</systemPath>
+		</dependency>
+	</dependencies>
 </project>
