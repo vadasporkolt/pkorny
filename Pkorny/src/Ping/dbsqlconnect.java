@@ -22,6 +22,7 @@ public class dbsqlconnect {
     private String loch2="jdbc:oracle:thin:@db.inf.unideb.hu:1521:ora11g";
     private String felhasz="HL_IG8QMT";
     private String jelszo="kassai";
+    // @Kapcsolodas az adatbazishoz az osztaly peldanyositasakor a konstruktorbol.
     public dbsqlconnect()
     {
         try
@@ -36,6 +37,7 @@ public class dbsqlconnect {
         }
         catch(Exception e){System.out.println("Hiba az adatbazis kapcsolatban!");};
     }
+    /** Adatok lekerese.*/
     public ResultSet GetData(String utasitas)
     {
         try
@@ -51,6 +53,9 @@ public class dbsqlconnect {
         return rs;
         
     }
+    /** 
+     *  Adatok rogzitese az adatbazisban.
+     */
     public void SetData(String kveri)
     {
         try{
@@ -60,6 +65,9 @@ public class dbsqlconnect {
         catch(Exception ex2)
         {System.out.println(ex2+"Setdata");}
     }
+    /**
+     *  Tábla létrehozása!
+     */
     public void create() throws SQLException 
     {
         String cr="create table PingTable(IPcim VARCHAR(30), Elerhetoe VARCHAR(3))";

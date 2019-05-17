@@ -6,6 +6,10 @@
 	<artifactId>Pkorny</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	<inceptionYear>2019</inceptionYear>
+	<organization>
+		<name>egyetem</name>
+	</organization> 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -93,6 +97,19 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.20</version>
+        <executions>
+          <execution>
+            <id>download-licenses</id>
+            <goals>
+              <goal>download-licenses</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 		</plugins>
 	</build>
 
@@ -105,7 +122,7 @@
 				<reportSets>
 					<reportSet>
 						<reports><!-- select reports -->
-							<report>index</report>
+							<report>index</report>							
 						</reports>
 					</reportSet>
 				</reportSets>
